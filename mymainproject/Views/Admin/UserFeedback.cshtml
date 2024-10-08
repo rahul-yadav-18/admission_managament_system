@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "UserFeedback";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<h2 class="text-center txt-mycolor m-3">User feedback</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">S.N.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Message</th>
+            <th scope="col">Picture</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            if (ViewBag.feed != null)
+            {
+                if (ViewBag.feed.Rows.Count > 0)
+                {
+                    int i = 1;
+                    foreach (var st in ViewBag.feed.Rows)
+                    {
+                        <tr>
+                            <td scope="row">@i</td>
+                            <td scope="row">@st[1]</td>
+                            <td scope="row"><a href="mailto:@st[2]" class="text-decoration-none">@st[2]</a></td>
+                            <td scope="row"><a href="tel:+91 @st[3]" class="text-decoration-none">@st[3]</a></td>
+                            <td scope="row">@st[4]</td>
+                            <td><a href="~/Content/caticons//@st[5]" target="_blank" style="text-decoration:none"><i class="fa fa-download text-bg-primary"></i></a></td>
+                            <td><a href="?id=@st[0]"><i class="text-danger fa fa-trash"></i> </a></td>
+                        </tr>
+                        { i = i + 1; }
+                    }
+                }
+            }
+        }
+    </tbody>
+</table>

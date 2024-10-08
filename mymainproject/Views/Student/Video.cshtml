@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Video";
+    Layout = "~/Views/Shared/student.cshtml";
+}
+<h2 class="text-center text-danger mt-4">Added Videos</h2>
+<div class="row mt-4">
+    <div class="col-sm-3">
+        @{
+            if (ViewBag.Video != null)
+            {
+                if (ViewBag.Video.Rows.Count > 0)
+                {
+                    foreach (var v in ViewBag.Video.Rows)
+                    {
+
+                        <div class="card m-3">
+                            <div class="row ">
+                                <div class="col-sm-8 mx-auto m-3">
+                                    <video height="100" style="width:100%;" controls>
+                                        <source src="~/Content/video/@v[5]" type="video/ogg" />
+                                    </video>
+                                    <h5 class="card-title">@v[3]</h5>
+                                    <p class="card-text">@v[4]</p>
+                                    <a href="~/Content/video/@v[5]" target="_blank" style="text-decoration:none"><i class="fa fa-download ms-5"></i></a>
+                                </div>
+
+                            </div>
+                        </div>               
+                    }
+                }
+                else
+                {
+                    <center>
+                        <div class="alert alert-danger d-flex align-items-center col-sm-8" role="alert">
+
+                            <div>
+                                No Video is added this category  by Admin  . Please Wait...<br />
+                            </div>
+                        </div>
+                    </center>
+                }
+
+            }
+        }
+    </div>
+</div>
+

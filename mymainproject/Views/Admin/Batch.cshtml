@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Batch";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<div class="row">
+    <div class="text-center fs-2">Batch <b class="txt-mycolor"> Management<i class="fa-solid fa-bars"></i></b></div>
+    <div class="col-sm-12 mx-auto">
+        <div class="row">
+            <div class="col-sm-4 card ms-4 mt-5">
+                <div class="card-body ">
+                    <h4 class="card-title text-center" style="color:#c6003d;">ADD Batch</h4>
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2 ">
+                                Batch Name :
+                            </label>
+                            <input type="text" required name="bname" class="form-control  mt-2" placeholder="Enter Batch Name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2 ">
+                                Batch Start Date :
+                            </label>
+                            <input type="Date" required name="sdate" class="form-control  mt-2" placeholder="Enter Batch Start Date" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2 ">
+                                Batch End Date :
+                            </label>
+                            <input type="Date" required name="edate" class="form-control  mt-2" placeholder="Enter Batch End Date" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2 ">
+                                Total Fee :
+                            </label>
+                            <input type="number" required name="tfee" class="form-control  mt-2" placeholder="Enter Total FEE " />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2 ">
+                                Batch Description :
+                            </label>
+                            <input type="text" required name="btopic" class="form-control  mt-2" placeholder="Enter Batch Topic" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2">Batch Pic :</label>
+                            <input type="file" required name="bpic" class="form-control  mt-2" />
+                        </div>
+                        <input type="submit" class="btn ms-4 mt-2 bg-mycolor text-light" value="BATCH ADD NOW" />
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-7 card  mt-5">
+                <table class="table table-bordered table-striped mt-4">
+                    <thead>
+                        <tr>
+                            <th>S No.</th>
+                            <th>Batch Name</th>
+                            <th>Batch Start Name</th>
+                            <th>Batch End Name</th>
+                            <th>Total Fee</th>
+                            <th>Batch Topic</th>
+                            <th>Batch Pic</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <thead>
+                        @{
+                            if (ViewBag.dat != null)
+                            {
+                                foreach (var r in ViewBag.dat.Rows)
+                                {
+                                    <tr>
+                                        <td>@r[0]</td>
+                                        <td>@r[1]</td>
+                                        <td>@r[2]</td>
+                                        <td>@r[3]</td>
+                                        <td>@r[4]</td>
+                                        <td>@r[5]</td>
+                                        <td><img src="~/Content/batchpic/@r[6]" height="60px" width="60px" /></td>
+                                        <td><a href="?id=@r[0]"><i class="text-danger fa fa-trash"></i> </a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "UploadTask";
+    Layout = "~/Views/Shared/student.cshtml";
+}
+
+<div class="row">
+    <div class="text-center fs-2">Upload Your  <b class="txt-mycolor"> Task<i class="fa-solid fa-bars"></i></b></div>
+    <div class="col-sm-12 mx-auto">
+        <div class="row">
+            <div class="col-sm-4 card ms-4 mt-5">
+                <div class="card-body ">
+                    <h4 class="card-title text-center" style="color:#c6003d;">Select Task</h4>
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2 ">
+                                Task  Name  :
+                            </label>
+                            <input type="text" required name="tname" class="form-control  mt-2" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2">Chose Code File :</label>
+                            <input type="file" name="cfile" required class="form-control  mt-2" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2">Chose Output File :</label>
+                            <input type="file" name="ofile" required class="form-control  mt-2" />
+                        </div>
+                        <input type="submit" class="btn ms-4 mt-2 bg-mycolor text-light" value=" Upload Your Task" />
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-7 ms-5 mt-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Task Name</th>
+                            <th scope="col">Maximum Number</th>
+                            <th scope="col">Obtain Number</th>
+
+                        </tr>
+                    </thead>
+                    <thead>
+                        @{
+                            if (ViewBag.mark != null)
+                            {
+                                if (ViewBag.mark.Rows.Count > 0)
+                                {
+                                    foreach (var m in ViewBag.mark.Rows)
+                                    {
+                                        <tr>
+                                            <td scope="row">@m[0]</td>
+                                            <td scope="row">@m[1]</td>
+                                            <td scope="row">@m[2]</td>
+                                        </tr>
+
+                                    }
+
+                                }
+                            }
+                        }
+
+                    </thead>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/student.cshtml";
+}
+<h1 class="txt-mycolor text-center fw-bold mt-3 mb-2">Your Profile</h1>
+<div class="row" >
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+        @{
+            if (ViewBag.pic != null)
+            {
+                if (ViewBag.pic.Rows.Count > 0)
+                {
+                    <img src="~/Content//profilepic/@ViewBag.pic.Rows[0][0]" class="img-fluid rounded-3 border-dark-subtle" style="margin-left:100px; margin-top:120px; border:4px solid black;" width="150px" height="150px" />
+                }
+                else
+                {
+                    <img src="~/Content//image/user.png" class="img-fluid rounded-3 border-dark-subtle" style="margin-left:50px; margin-top:100px; border:4px solid black;" width="150px" height="150px" />
+                }
+            }
+            else
+            {
+                <img src="~/Content//image/user.png" class="img-fluid rounded-3 border-dark-subtle" style="margin-left:50px; margin-top:100px; border:4px solid black;" width="150px" height="150px" />
+            }
+        }
+
+    </div>
+    <div class="col-sm-6 ">
+        <table border="1" cellpadding="10px" class="m-5 p-5">
+            @{
+                if (ViewBag.profile != null)
+                {
+                    foreach (var r in ViewBag.profile.Rows)
+                    {
+                        <tr>
+                            <td> Name :</td>
+                            <td>@r[0]</td>
+                        </tr>
+                        <tr>
+                            <td>Email  :</td>
+                            <td>@r[1]</td>
+                            </tr>
+                        <tr><td>Mobile Number :</td><td>@r[3]</td></tr>
+                        <tr><td> Gender : </td><td>@r[4]</td></tr>
+                        <tr><td>College Name : </td><td>@r[5]</td></tr>
+                        <tr><td>Course Name :</td><td>@r[6]</td></tr>
+                    }
+                }
+            }
+            @{
+                if (ViewBag.batc != null)
+                {
+                    foreach (var r in ViewBag.batc.Rows)
+                    {
+                        <tr><td>Batch Name :</td><td>@r[0]</td></tr>
+                    }
+                }
+            }
+        <tr> <td><a href="/student/updateprofile"><input type="submit" class="ms-2    rounded rounded-4 " value="Update " /></a></td></tr>
+        </table>
+       
+    </div>
+</div>
+
+

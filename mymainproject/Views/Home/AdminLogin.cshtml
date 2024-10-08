@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "AdminLogin";
+    Layout = "~/Views/Shared/general.cshtml";
+}
+<style>
+    .t {
+        border-radius: 30px;
+        margin-top: 30px;
+    }
+</style>
+<div class="row">
+    <div class="col-sm-6 mx-auto mt-4 bg-light">
+        <h2 class="mt-4"><center>Admin <text class="txt-mycolor">Login</text></center></h2>
+        <form method="post">
+            <div class="row">
+                <div class="col-sm-9 mx-auto input-group">
+                  
+                    <span class="input-group-text t" id="basic-addon1 ">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+                    <input type="email"required name="adminid" class="form-control t" placeholder="Enter  Admin ID.." />
+                </div>
+                <div class="input-group ">
+                    
+                    <span class="input-group-text t" id="basic-addon1 ">
+                        <i class="fa-solid fa-key"></i>
+                    </span>
+                    <input type="password" required name="password" class="form-control t" placeholder="Type password.." />
+                </div>
+            </div>
+            <button type="submit" class="btn form-control text-light fw-bold bg-mycolor t">Login Now</button>
+        </form>
+    </div>
+</div>
+

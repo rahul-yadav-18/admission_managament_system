@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/css/all.css" rel="stylesheet" />
+    <style>
+        :root {
+            --mycolor: linear-gradient(45deg,#4a148c,#f50057);
+            --txtmycolor: #f50057;
+        }
+
+        .bg-mycolor {
+            background: var(--mycolor) !important;
+        }
+
+        .txt-mycolor {
+            color: var(--txtmycolor);
+        }
+
+        .a:hover {
+            color: #f50057;
+        }
+
+        .dd {
+            width: 330px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row text-bg-dark text-center">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            Welcome to <b class="txt-mycolor">DayNight Learning</b>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+
+        </div>
+    </div>
+    <div class="row menu">
+        
+        <nav class="navbar navbar-dark bg-dark sticky-top" style="margin-top:.1%;">
+            <div class="container-fluid ps-5">
+                <a href="/student/index" style="text-decoration:none; color:black;">
+                    <img src="/Content/image/Picture1.png" style="margin-left:400px;" width="300px" height="50px" />
+                </a>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                    <img src="/Content/profilepic/rahul.jpg" class="img-fluid rounded-3" style="margin-left:50px; margin-top:-30px;" width="50px" height="50px" />
+
+                    </a>
+                    
+                    <ul class="dropdown-menu dd">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                                    <img src="/Content/profilepic/rahul.jpg" class="img-fluid rounded-3" style="margin-top:20px; width:50px; height:50px;" />
+
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <p>
+                                                        <h6>Rahul Yadav   <i class="fa-light fa-circle-check" style="color: #1da1f2;"></i></h6>
+ry888764@gmail.com
+                                        </p>
+                                        <p></p>
+                                    </div>
+                                    <hr />
+                                </div>
+                            </a>
+                        </li>
+
+                        <li><a class="dropdown-item text-warning fw-bold" href="/student/profile">View Your Profile</a></li>
+                        <li><a class="dropdown-item a" href="/student/updateprofile">Update Your Profile</a></li>
+                        <li><a class="dropdown-item a" href="/student/help">Help</a></li>
+                        <li><a class="dropdown-item a" href="/student/sendfeedback">Feedback</a></li>
+                        <li><a class="dropdown-item a" href="/student/changepass">Change Password</a></li>
+
+                        <li><a class="dropdown-item text-danger" href="/student/logout">Logout</a></li>
+                    </ul>
+                </li>
+
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a href="/student/updateprofile" target="_blank" style="text-decoration:none;"> <p class="fw-bold txt-mycolor">Update Profile .</p></a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/student/index">
+                                    Dashboard
+                                    <i class="fa-solid fa-bars"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a" href="#">Video Lectures </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a" href="#">Assignment </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a" href="#">
+                                    Uploaded
+                                    Assignment
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a" href="/student/profile">My Profile </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a" href="#">Sent Feedback </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a" href="#">Help </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a" href="/student/changepass">Change Password </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a" href="/student/logout">
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    </div>
+    <div class="row">
+        <div class="col-sm-12 py-3" style="min-height:700px;">
+            
+
+
+<style>
+    .dash {
+        min-height: 120px;
+        box-shadow: 0px 0px 50px grey;
+        padding-top: 7%;
+    }
+</style>
+<div class="row">
+    <div class="text-center fs-2">Dashboard <b class="text-warning"><i class="fa-solid fa-bars"></i></b></div>
+    <div class="col-sm-10 mx-auto">
+        <div class="row mt-5">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/videocategory" style="text-decoration:none; color:black;">
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-video"></i><br />
+                        Video Lectures
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/task" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-clock"></i><br />
+                        Today Task
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/uploadtask" style="text-decoration:none; color:black;">
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-rotate"></i><br/>
+                        Task Upload
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/profile" style="text-decoration:none; color:black;">
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-user"></i></i><br />
+                        My Profile
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/updateprofile" style="text-decoration:none; color:black;">
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-regular fa-user"></i><br />
+                        Update Your Profile
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/softwarekit" style="text-decoration:none; color:black;">
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-download"></i><br/>
+                        Software Kit
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/studymaterial" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-file-pdf"></i>  <br />
+                        Study Material
+
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/classlink" style="text-decoration:none; color:black;">
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list-ol"></i></i><br />
+                        Class Link
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/sendfeedback" style="text-decoration:none; color:black;">
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-star"></i><br />
+                        Sent Feedback
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/help" style="text-decoration:none; color:black;">
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-question"></i><br />
+                        Help
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/changepass" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-lock"></i><br />
+                        Change Password
+
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/student/logout" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-right-from-bracket"></i><br />
+                        Logout
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        </div>
+    </div>
+    <div class="row bfooter text-light bg-dark" style="height:25px;">
+        <div class="col-sm-12">
+            <p>  &copy; copyright <b class="txt-mycolor">DayNight</b> Learning 2023 Developed By <a href="#" style="text-decoration:none;">Rahul Yadav</a>  </p>
+        </div>
+    </div>
+    <script src="/Content/js/bootstrap.bundle.js"></script>
+</body>
+</html>

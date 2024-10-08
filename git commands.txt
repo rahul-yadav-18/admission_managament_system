@@ -1,0 +1,6 @@
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/rahul-yadav-18/admission_managament_system.git
+git push -u origin main

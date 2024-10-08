@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "SignIn";
+    Layout = "~/Views/Shared/general.cshtml";
+}
+<style>
+    .t{
+        border-radius:30px;
+        margin-top:30px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-sm-6 mx-auto mt-4 bg-light">
+        <h2 class="mt-4"><center>Welcome to DayNight <text class="txt-mycolor">Learning</text></center></h2>
+        <form method="post">
+            <div class="row">
+                <div class="col-sm-9 mx-auto input-group">
+                    <span class="input-group-text t" id="basic-addon1 ">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+                    <input type="email" name="email" required class="form-control t" placeholder="Enter your user ID.." />
+                </div>
+                <div class="input-group ">
+                    <span class="input-group-text t" id="basic-addon1 ">
+                        <i class="fa-solid fa-key"></i>
+                    </span>
+                    <input type="password" required name="password" class="form-control t" placeholder="Type password.." />
+                </div>
+            </div>
+            <button type="submit" class="btn form-control text-light fw-bold bg-mycolor t">SignIn</button>    
+        </form><br/><br/>
+        <hr />
+        <center><p>Do Not have an Account ? <a href="/home/signup" style="text-decoration:none;" class="txt-mycolor">Register</a></p></center>
+    </div>
+</div>
+

@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "DevloperDet";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+
+<h2 class="text-center txt-mycolor my-4">DevloperDelailts</h2>
+<div class="row">
+    <div class="col-sm-4 card ms-4 mt-5">
+        <div class="card-body ">
+            <h4 class="card-title text-center" style="color:#c6003d;">Developer Details</h4>
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2 ">
+                        Select Developer Name  :
+                    </label>
+                    <select name="cbatch" class="form-control mt-2">
+                        <option value="0">Select Devloper</option>
+                        @foreach (var row in ViewBag.dev.Rows)
+                        {
+                            <option value="@row[0]">@row[1]</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2">Resume :</label>
+                    <input type="file" name="resume" required class="form-control  mt-2" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2">fb :</label>
+                    <input type="text" name="fb" required class="form-control  mt-2" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2">Instagram :</label>
+                    <input type="text" name="insta" required class="form-control  mt-2" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2">Linkdin :</label>
+                    <input type="text" name="linkdin" required class="form-control  mt-2" />
+                </div>
+                <input type="submit" class="btn ms-4 mt-2 bg-mycolor text-light" value=" Insert Your Developer Details" />
+            </form>
+        </div>
+    </div>
+</div>
+

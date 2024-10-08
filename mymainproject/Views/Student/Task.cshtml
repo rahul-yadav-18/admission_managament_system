@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Task";
+    Layout = "~/Views/Shared/student.cshtml";
+}
+
+<h2 class="text-center txt-mycolor">Your Today's Task</h2>
+<div class="container">
+    <div class="row">
+        @{
+            if (ViewBag.task != null)
+            {
+                if (ViewBag.task.Rows.Count > 0)
+                {
+
+                    foreach (var t in ViewBag.task.Rows)
+                    {
+
+                        <div class="col-sm-4  mt-4">
+                            <div class="card text-center bg-light">
+                                <div class="card-header">
+                                    Added on : @t[6]<br />
+                                    Assigned by : @t[5]
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">@t[2]</h5>
+                                    <p class="card-text">@t[3]</p>
+                                    <a href="~/Content/assignment/@t[4]" class="btn bg-mycolor text-light" target="_blank">SHOW TASK</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    }
+
+                }
+                else
+                {
+                    <h2 class="text-center mt-5">Your Task will be not Upload please wait</h2>
+                }
+            }
+
+        }
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "ChangePass";
+    Layout = "~/Views/Shared/student.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-4 card mx-auto my-5" ">
+        <div class="card-body ">
+            <h4 class="card-title text-center" style="color:#c6003d;">Change Password</h4>
+            <form method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2 ">
+                        Old Password :
+                    </label>
+                    <input type="password" required name="opass" class="form-control  mt-2" placeholder="Enter Your Old Password" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2 ">
+                        New Password :
+                    </label>
+                    <input type="password" required name="npass" class="form-control  mt-2" placeholder="Enter Your New Password" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2 ">
+                        Confirm New Password :
+                    </label>
+                    <input type="password" required name="cnpass" class="form-control  mt-2" placeholder="Enter Same New Password" />
+                </div>
+                <input type="submit" class="btn ms-4 mt-2 bg-mycolor text-light" value="Change Your  Password" />
+            </form>
+        </div>
+    </div>
+</div>
+

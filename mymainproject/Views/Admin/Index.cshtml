@@ -1,0 +1,186 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+
+<style>
+    .dash {
+        min-height: 120px;
+        box-shadow: 0px 0px 50px grey;
+        padding-top: 8%;
+    }
+</style>
+<div class="row">
+    <div class="text-center fs-2">Dashboard <b class="text-warning"><i class="fa-solid fa-bars"></i></b></div>
+    <div class="col-sm-10 mx-auto">
+        <div class="row mt-5">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/category" style="text-decoration:none; color:black;">
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Add Category
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/video" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Add  Video
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/assignment" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Add  Assignment
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/submitedtask" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Submited Task
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/batch" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Add Batch
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/classlink" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Add Class Link
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/contactmgmt" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash p-1 rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        ContactUs Management
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/studentmgmt " style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Student Management
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/studenthelp" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Student Help
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/slider" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Slider Images
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/studentfeedback" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Student Feedback
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/studymaterial " style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Study Material
+                </a>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/userfeedback " style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        User Feedback
+                    </p>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/devloper " style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Our  Developer
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/devloperdet " style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Our Developer Details
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/changepass" style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Change Password
+                    </p>
+                </a>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="/admin/logout " style="text-decoration:none; color:black;">
+
+                    <p class="bg-light text-center dash rounded fs-4">
+                        <i class="fa-solid fa-list"></i><br />
+                        Log Out
+                    </p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+

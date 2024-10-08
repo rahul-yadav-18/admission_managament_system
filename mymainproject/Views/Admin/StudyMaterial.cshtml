@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "StudyMaterial";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<h2 class="text-center txt-mycolor m-3">StudyMaterial</h2>
+<div class="row">
+    <div class="col-sm-8 mx-auto bg-light mt-4 pt-3 mb-3">
+
+
+        <form method="post" enctype="multipart/form-data" class="mt-5">
+            <div class="row">
+                <div class="col-sm-12">
+                    <b>Title :</b><br />
+                    <input type="text" name="title" class="form-control mt-1 mb-3" />
+                </div>
+                
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <b>PDF :</b><br />
+                    <input type="file" name="pdf" class="form-control mt-1 mb-3" />
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <b>Batch :</b><br />
+                    <select name="cbatch" class="form-control mt-2">
+                        <option value="0">Select Batch</option>
+                        @foreach (var row in ViewBag.bac.Rows)
+                        {
+                            <option value="@row[0]">@row[1]</option>
+                        }
+
+                    </select>
+                </div>
+
+            </div>
+            <center><button type="submit" class="btn bg-mycolor text-light fw-bold">Submit</button></center>
+        </form>
+
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">S.N.</th>
+            <th scope="col">Title</th>
+            <th scope="col">Pdf</th>
+            <th scope="col">Batch id</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            if (ViewBag.sm != null)
+            {
+                if (ViewBag.sm.Rows.Count > 0)
+                {
+                    int i = 1;
+                    foreach (var st in ViewBag.sm.Rows)
+                    {
+                        <tr>
+                            <td scope="row">@i</td>
+                            <td scope="row">@st[1]</td>
+                            <td><a href="~//Content/pdf/@st[2]" target="_blank" style="text-decoration:none"><i class="fa fa-download text-bg-primary"></i></a></td>
+                            <td scope="row">@st[3]</td>                          
+                            <td><a href="?id=@st[0]"><i class="text-danger fa fa-trash"></i> </a></td>
+                        </tr>
+                        { i = i + 1; }
+                    }
+                }
+            }
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+<div class="row">
+    <div class="text-center fs-2">Category <b class="txt-mycolor"> Management<i class="fa-solid fa-bars"></i></b></div>
+    <div class="col-sm-12 mx-auto">
+        <div class="row">
+            <div class="col-sm-4 card ms-4 mt-5">
+                <div class="card-body ">
+                    <h4 class="card-title text-center" style="color:#c6003d;">ADD VIDEO CATEGORY</h4>
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-4 ">Category Name :</label>
+                            <input type="text" required name="catname" class="form-control  mt-2" id="catname" aria-describedby="Category" placeholder="Enter Video Category" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-4">Category Icon :</label>
+                            <input type="file" required name="caticon" class="form-control  mt-2" id="caticon" aria-describedby="Category" placeholder="Enter Video Category" />
+                        </div>
+                        <input type="submit" class="btn ms-4 mt-3 bg-mycolor text-light" value="ADD NOW" />
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-7 card ms-4 mt-5">
+                <table class="table table-bordered table-striped mt-4">
+                    <thead>
+                        <tr>
+                            <th>S No.</th>
+                            <th>Category Name</th>
+                            <th>Category icon</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            if (ViewBag.data != null)
+                            {
+
+                                foreach (var r in ViewBag.data.Rows)
+                                {
+                                    <tr>
+                                        <td>@r[0]</td>
+                                        <td>@r[1]</td>
+                                        <td><img src="~/Content/caticons/@r[2]" height="50px" width="50px" /></td>
+                                        <td><a href="?id=@r[0]"><i class="text-danger fa fa-trash"></i> </a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

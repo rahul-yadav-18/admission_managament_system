@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Classlink";
+    Layout = "~/Views/Shared/student.cshtml";
+}
+
+@{
+    if (ViewBag.link != null)
+    {
+        if (ViewBag.link.Rows.Count > 0)
+        {
+            <div class="row">
+                <div class="col-sm-4 card text-center mx-auto mt-5 pb-5 pt-4 bg-light" style="box-shadow:">
+                    <h4 class="txt-mycolor"><i class="fa-solid fa-video"></i><br />Your Class Video Link </h4>
+                    <b>Your Main Batch Classes </b>
+                    <a href="@ViewBag.link.Rows[0][2]" class="text-decoration-none m-2 " target="_blank"><input type="submit" class="txt-mycolor" value="Go Watch"/></a>
+                    <b class="m-2">Class Date : @ViewBag.link.Rows[0][3] </b>
+                    <b class="m-2">Class Timing : @ViewBag.link.Rows[0][4] - @ViewBag.link.Rows[0][5]</b>
+                    <b class="m-2">@ViewBag.link.Rows[0][6]</b>
+                    <b class="m-2">Adding On : @ViewBag.link.Rows[0][7]</b>
+                </div>
+            </div>
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Devloper";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<h2 class="text-center txt-mycolor my-4">Developer management</h2>
+<div class="row">
+    <div class="col-sm-4 card ms-4 mt-5">
+        <div class="card-body ">
+            <h4 class="card-title text-center" style="color:#c6003d;">Developer</h4>
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2 ">
+                        Name  :
+                    </label>
+                    <input type="text" required name="name" class="form-control  mt-2" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail" class="mt-2">Image :</label>
+                    <input type="file" name="img" required class="form-control  mt-2" />
+                </div>
+                <input type="submit" class="btn ms-4 mt-2 bg-mycolor text-light" value=" Insert Your Developer" />
+            </form>
+        </div>
+    </div>
+    
+
+</div>
+

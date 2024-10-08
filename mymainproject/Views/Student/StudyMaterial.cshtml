@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "StudyMaterial";
+    Layout = "~/Views/Shared/student.cshtml";
+}
+
+<h2 class="text-center txt-mycolor m-3">StudyMaterial</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">S.N.</th>
+            <th scope="col">Title</th>
+            <th scope="col">PDF File</th>         
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            if (ViewBag.stm != null)
+            {
+                if (ViewBag.stm.Rows.Count > 0)
+                {
+                    int i = 1;
+                    foreach (var st in ViewBag.stm.Rows)
+                    {
+                        <tr>
+                            <td scope="row">@i</td>
+                            <td scope="row">@st[1]</td>
+                            <td scope="row"> <a href="~/Content/pdf/@st[2]" class="btn bg-mycolor text-light" target="_blank"><i class="fa fa-download"></i></a></td>
+
+                        </tr>
+                        { i = i + 1; }
+                    }
+                }
+            }
+        }
+    </tbody>
+</table>

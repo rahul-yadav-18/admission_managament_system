@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Studentmgmt";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<h2 class="text-center txt-mycolor m-3">Register Studentmgmt</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">S.N.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Password</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Batch</th>
+            <th scope="col">College Name</th>
+            <th scope="col">Course</th>
+            <th scope="col">Registration Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            if (ViewBag.regstudent != null)
+            {
+                if (ViewBag.regstudent.Rows.Count > 0)
+                {
+                    int i = 1;
+                    foreach (var st in ViewBag.regstudent.Rows)
+                    {
+                        <tr>
+                            <td scope="row">@i</td>
+                            <td scope="row">@st[0]</td>
+                            <td scope="row">@st[1]</td>
+                            <td scope="row">@st[3]</td>
+                            <td scope="row">@st[2]</td>
+                            <td scope="row">@st[4]</td>
+                            <td scope="row">@st[7]</td>
+                            <td scope="row">@st[5]</td>
+                            <td scope="row">@st[6]</td>
+                            <td scope="row">@st[8]</td>
+                        </tr>
+                        { i = i + 1; }
+                    }
+                }
+            }
+        }
+    </tbody>
+</table>
+

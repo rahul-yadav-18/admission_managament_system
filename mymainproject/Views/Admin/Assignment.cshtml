@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Assignment";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<div class="row">
+    <div class="text-center fs-2">Assignment <b class="txt-mycolor"> Management<i class="fa-solid fa-bars"></i></b></div>
+    <div class="col-sm-12 mx-auto">
+        <div class="row">
+            <div class="col-sm-4 card ms-4 mt-5">
+                <div class="card-body ">
+                    <h4 class="card-title text-center" style="color:#c6003d;">ADD Assignment</h4>
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-4 ">Chose Batch :</label>
+                            <select name="cbatch" class="form-control mt-2">
+                                <option value="0">Select Batch</option>
+                                @foreach (var row in ViewBag.batches.Rows)
+                                {
+                                    <option value="@row[0]">@row[1]</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2 ">
+                                Title :
+                            </label>
+                            <input type="text" name="title" class="form-control  mt-2" placeholder="Enter Title of Assignment" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2 ">
+                                Description :
+                            </label>
+                            <textarea name="description" class="form-control mt-2" placeholder="Write the Description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2">Chose Task :</label>
+                            <input type="file" name="task" class="form-control  mt-2" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail" class="mt-2">Name of Aurthor :</label>
+                            <input type="text" name="aurthor" class="form-control  mt-2" placeholder="Aurthor Name" />
+                        </div>
+                        <input type="submit" class="btn ms-4 mt-2 bg-mycolor text-light" value=" Assignment ADD NOW" />
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-7 card ms-4 mt-5">
+                <table class="table table-bordered table-striped mt-4">
+                    <thead>
+                        <tr>
+                            <th>S No.</th>
+                            <th>Batch Name</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Download Task</th>
+                            <th>Name of Authsor</th>
+                            <th>Add Date</th>
+                            <th>Action</th>
+                        </tr>
+                        @{
+                            if (ViewBag.dd != null)
+                            {
+                                foreach (var r in ViewBag.dd.Rows)
+                                {
+                                    <tr>
+                                        <td>@r[0]</td>
+                                        <td>@r[1]</td>
+                                        <td>@r[2]</td>
+                                        <td>@r[3]</td>
+                                        <td><a href="~/Content/assignment/@r[4]" target="_blank" style="text-decoration:none"><i class="fa fa-download"></i></a></td>
+                                        <td>@r[5]</td>
+                                        <td>@r[6]</td>
+                                        <td><a href="?id=@r[0]"><i class="text-danger fa fa-trash"></i> </a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

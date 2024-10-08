@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "VideoCategory";
+    Layout = "~/Views/Shared/student.cshtml";
+}
+
+<h2 class="text-center txt-mycolor my-4">VideoCategory</h2>
+<div class="container">
+    <div class="row">
+        @{
+            if (ViewBag.vcat != null)
+            {
+                if (ViewBag.vcat.Rows.Count > 0)
+                {
+
+                    foreach (var t in ViewBag.vcat.Rows)
+                    {
+
+                        <div class="col-sm-2" style="padding:1%">
+                            <div class="card">
+                                <a href="/student/video?cid=@t[0]" style="text-decoration:none">
+                                    <img src="~/Content/caticons/@t[2]" class="card-img-top" style="height:100px;" />
+                                    <div class="card-body">
+                                        <p class="card-text txt-mycolor text-center"><b>@t[1]</b></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    }
+                }
+                else
+                {
+                    <h2 class="text-center mt-5">Your Task will be not Upload please wait</h2>
+                }
+            }
+
+        }
+    </div>
+</div>

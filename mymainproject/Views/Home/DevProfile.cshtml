@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "DevProfile";
+    Layout = "~/Views/Shared/general.cshtml";
+}
+<div class="row mt-4">
+    <div class="col-sm-12">
+        @{
+            if (ViewBag.devp != null)
+            {
+                if (ViewBag.devp.Rows.Count > 0)
+                {
+                    foreach (var v in ViewBag.devp.Rows)
+                    {
+
+                        <div class="card m-3 bg-light">
+                            <div class="row ">
+                                        <div class="col-sm-8 mx-auto m-3">
+                                            <img src="~/Content/resume1/@v[2]" height="800px" width="800px" />
+                                        </div>
+                                        <div class="row txt-mycolor text-center">
+                                            <div class="col-sm-12 txt-mycolor">
+                                                <a href="https://www.facebook.com/@v[3]" class=" ps-2 fs-5"><i class="fa-brands fs-1 fa-square-facebook"></i></a>
+                                                <a href="https://www.instagram.com/@v[5]" class=" ps-2 fs-5"><i class="fa-brands fs-1 fa-square-instagram"></i></a>
+                                                <a href="https://www.linkedin.com/in/@v[4]/" target="_blank" class=" ps-2 fs-5"><i class="fa-brands fs-1 fa-linkedin"></i></a>
+                                            </div>
+                                            
+                                        </div>
+                                           
+                                            
+
+                                       
+
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        }
+    </div>
+</div>
